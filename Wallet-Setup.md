@@ -38,8 +38,10 @@ END;
 
 Create a folder wallet to hold the certificate under the ORACLE_HOME directory. 
 
-Tip for windows - on windows to find the oracle home , find the parent folder of bin folder, the bin folder is where sqlplus.exe resides. 
-
+if you have done default installation of 18XE on windows then probably the ORACLE_HOME environment variable may not be set. So before creating wallet you need to set ORACLE_HOME environment variable. 
+1. Check if ORACLE_HOME is set by this command  -  echo %ORACLE_HOME% 
+2. First, find out the oracle home folder - On windows the parent folder of bin folder is your oracle home. The bin folder is where sqlplus.exe resides. 
+3. Add this as environment variable.
 ```
 cd $ORACLE_HOME  
 mkdir wallet  
